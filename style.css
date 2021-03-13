@@ -214,6 +214,10 @@ a:focus{ outline: none; }
     position: relative;
     padding: 8px 23px;
 }
+#mainBanner p.btn_submit_buy_now button:hover{
+    color: #fff;
+    background: #ff9c00;
+} 
 #mainBanner .container{
     position: relative;
 }
