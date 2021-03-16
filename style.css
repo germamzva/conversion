@@ -5,6 +5,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background: url(images/main_background.png) repeat;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -66,16 +67,25 @@ a:focus{ outline: none; }
         content: '';
         background: #ff9c00;
         height: 4px;
-        width: 65%;
-        bottom: 4px;
+        width: 30%;
+        bottom: -4px;
         left: 8px;
         position: absolute;
     }
 
 #search_btn{}
     #search_btn img{ width: .9rem; }
-#number_btn{  }
-    #number_btn img{ width: 1rem; }
+#number_btn a{ 
+    border-radius: 0%; 
+    border-color: #11304e; 
+}
+#number_btn a:hover{
+    color: #11304e;
+    background: transparent;
+}
+    #number_btn img{ 
+        width: 1rem; 
+    }
 
 /* searchBar */
 #searchBar{ 
@@ -117,7 +127,6 @@ a:focus{ outline: none; }
     top: 0;
     bottom: 0;
     padding-top: 5rem;
-    padding-bottom: 5rem;
     text-align: center;
     overflow: auto;
 }
@@ -214,10 +223,6 @@ a:focus{ outline: none; }
     position: relative;
     padding: 8px 23px;
 }
-#mainBanner p.btn_submit_buy_now button:hover{
-    color: #fff;
-    background: #ff9c00;
-} 
 #mainBanner .container{
     position: relative;
 }
@@ -320,10 +325,21 @@ a:focus{ outline: none; }
             width: 30px;
         }
 
-        #mainContent_1 .box_offers .card{ box-shadow: 0 3px 12px #d1d1d1; }
+        #mainContent_1 .box_offers .card{ 
+            box-shadow: 0 3px 12px #d1d1d1;
+            border: none;
+        }
         #mainContent_1 .box_offers .card .card-body{ }
             #mainContent_1 .box_offers .card .card-body ul{ margin-top: 30px; }
-            #mainContent_1 .box_offers .card .card-body ul li{ border-radius: 0px; background: #fff; text-align: center; }
+            #mainContent_1 .box_offers .card .card-body ul li{ 
+                border-radius: 0px; 
+                background: #fff; 
+                text-align: center; 
+                border: 1px solid rgb(0 0 0 / 0%);
+            }
+            #mainContent_1 .box_offers .card .card-body ul li:last-child{
+                border: 1px solid rgb(0 0 0 / 0%);
+            }
             #mainContent_1 .box_offers .card .card-body ul li.list-group-item-dark{ background: #f0f0f0;}
         #mainContent_1 .box_offers .card .card-footer{ background: #fff; }
         #mainContent_1 .box_offers .card .card-footer a{ 
@@ -469,6 +485,15 @@ a:focus{ outline: none; }
             font-size: 1.50rem;
             border-radius: 0px;
             padding: .6rem 1.70rem;
+            border-width: 2px;
+            background-color: none;
+            border-color: #11304e;
+            color: #11304e;
+        }
+        #mainContent_4 p.buy_now_btn a:hover{
+            background-color: #11304e;
+            border-color: #11304e;
+            color: #fff;
         }
 
     /* mainContent_5 */
@@ -548,10 +573,10 @@ a:focus{ outline: none; }
     #mainContent_7::after{
         content: '';
         background: url(images/img-faster-strong-wifi-after.png) no-repeat right 0;
-        width: 30%;
-        height: 100%;
+        width: 36%;
+        height: 990px;
         position: absolute;
-        top: 85px;
+        top: 75px;
         right: 0px;
         z-index: -1;
         background-size: cover;
@@ -582,6 +607,31 @@ a:focus{ outline: none; }
         #mainContent_7 h1 span{
             font-size: 10rem;
             font-weight: 700;
+        }
+        #mainContent_7 #btn_holder_7 a{
+            font-size: 1.50rem;
+            border-radius: 0px;
+            padding: .6rem 1.70rem;
+            border-width: 2px;
+        }
+        #mainContent_7 #btn_holder_7 a:nth-child(1){
+            background-color: #11304e;
+            border-color: #11304e;
+            color: #fff;
+        }
+        #mainContent_7 #btn_holder_7 a:nth-child(1):hover{ 
+            background-color: #fff;
+            border-color: #11304e;
+            color: #11304e;
+        }
+        #mainContent_7 #btn_holder_7 a:nth-child(2){
+            background-color: #fff;
+            border-color: #11304e;
+            color: #11304e;
+        }
+        #mainContent_7 #btn_holder_7 a:nth-child(2):hover{ 
+            background-color: #11304e;
+            color: #fff
         }
  
     /* mainContent_8 */
@@ -721,6 +771,17 @@ a:focus{ outline: none; }
     #mainContent_9{ 
         padding-bottom: 10rem!important;
     }
+    .transparent_bg_9{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(255 255 255 / 85%);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
     #mainContent_9 .card{
         background: url(images/img-bg-about.png);
         background-size: cover;
@@ -744,6 +805,7 @@ a:focus{ outline: none; }
         background: #11304e;
         left: -6px;
         top: 31%;
+        z-index: 1;
     }
     #mainContent_9 .card h2{
         font-size: 40px;
@@ -802,8 +864,17 @@ a:focus{ outline: none; }
         padding-top: 14px;
     }
     #mainContent_12 .card .card-body h2{}
-    #mainContent_12 .card .card-body h2::after{ content: ''; width: 20%; height: 3px; background: #f79612; position: absolute; left: 40%; top: 57px;}
-    #mainContent_12 .card .card-body p{}
+    #mainContent_12 .card .card-body h2::after{ 
+        content: '';
+        width: 14%;
+        height: 7px;
+        background: #f79612;
+        position: absolute;
+        left: 43%;
+        top: 65px;
+    }
+    #mainContent_12 .card .card-body p{
+    }
 
     /* mainContent_13 */
     #mainContent_13{}
@@ -816,11 +887,14 @@ a:focus{ outline: none; }
             position: absolute;
             content: '';
             background: #f79612;
-            width: .2rem;
-            height: 3rem;
-            left: 49px;
+            width: .3rem;
+            height: 4.40rem;
+            left: 72px;
             border-radius: 30px;
         }
+        #mainContent_13 .card .card-body{}
+        #mainContent_13 .card .card-body h2{}
+        #mainContent_13 .card .card-body p{ font-size: 1.50rem; }
         
 /* footerMain */
 #footerMain{
@@ -834,6 +908,8 @@ a:focus{ outline: none; }
 #footer_list h4{
     color: #11304e;
     position: relative;
+    font-weight: 600;
+    padding-bottom: 12px;
 }
 #footer_list h4:after{ 
     content: '';
@@ -848,6 +924,7 @@ a:focus{ outline: none; }
     list-style: circle;
     list-style-type: circle;
     padding-left: 19px;
+    padding-top: 17px;
 }
 #footer_list ul li{ 
     
@@ -857,7 +934,7 @@ a:focus{ outline: none; }
     color: #5f5f5f;
 }
 #footer_list ul li::marker{
-    font-size: 23px;
+    font-size: 18px;
     color: #f99c0c;
 }
 #footer_list::after{
@@ -877,7 +954,10 @@ a:focus{ outline: none; }
 /* mobile responsive */
 
 @media (max-width: 1024px){ 
-    .mainHeader_contact_info p{ font-size: 1rem!important; }
+    .mainHeader_contact_info p{ 
+        font-size: .8rem!important;
+        text-align: center!important;
+    }
     .mainHeader_nav_menu .navbar-brand{ margin-bottom: 0; width: 20%; display: flex; order: 1; }
     .mainHeader_nav_menu .navbar-brand img{ padding-top: .50rem; padding-bottom: .50rem; }
     .mainHeader_nav_menu .navbar-toggler-icon{ background: url(images/menu-bar.svg) no-repeat; width: 1.40rem; height: 1.40rem; }
@@ -943,12 +1023,23 @@ a:focus{ outline: none; }
     #mainContent_7 h1{ font-size: 2.50rem; }
     #mainContent_7 h1 span{ font-size: 4rem; }
     #shadow_lines{ top: 13rem!important; right: 22rem!important; }
-    #mainContent_7::after{ width: 49%; height: 99%; }
+    #mainContent_7::after{ 
+        width: 49%;
+        height: 122%;
+        right: -3px;
+    }
 
     /* mainContent_8 */
     #mainContent_8{}
     #mainContent_8 #more_tab_content .card .card-body h2{ font-size: 1.50rem; padding-right: 158px; }
     #mainContent_8 #more_tab_content .card .card-body h2 span{ width: 28%; }
+    #mainContent_8 #more_tab_content #promo_prize{ right: -24px; }
+
+    /* mainContent_9 */
+    #mainContent_9 .card::after{ 
+        bottom: -25%;
+        right: -48px; 
+    }
 
     /* mainContent_13 */
     #mainContent_13 .card .card-body::before{ left: 61px; }
@@ -1045,6 +1136,13 @@ a:focus{ outline: none; }
         #shadow_lines{ display: none; }
         #hp_faster_router{ left: 2px!important; width: 100%; margin: 0 auto; }
         #hp_faster_router img{ width: 79%; }
+        #mainContent_7 #btn_holder_7{ 
+            text-align: center; 
+            margin-bottom: 30px;
+        }
+        #mainContent_7 #btn_holder_7 a{ 
+            font-size: 1rem;
+        }
 
     /* #mainContent_8 */
     #mainContent_8{}
@@ -1080,8 +1178,14 @@ a:focus{ outline: none; }
     #mainContent_12 .customer_supports{ margin-top: 2.50rem!important; }
 
     /* mainContent_13 */
-    #mainContent_13 .card .card-body::before{ top: 18px; left: 58px; }
+    #mainContent_13 .card .card-body::before{ 
+        top: 18px; 
+        left: 58px; 
+        height: 2.9rem;
+    }
     #mainContent_13 #icon_supports img { width: 80%; }
+    #mainContent_13 .card .card-body h2{ font-size: 1.2rem; }
+    #mainContent_13 .card .card-body p{ font-size: .9rem; }{
 
     /* #footerMain */
     #footerMain{ padding-top: 3rem!important; background-size: cover; }
