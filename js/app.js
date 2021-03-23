@@ -14,7 +14,7 @@ $(document).ready(function(){
   // tv page product carousel
   $("#productSlider").owlCarousel({
     items: 3,
-    margin: 15,
+    margin: 14,
     trl: true,
     lazyLoad: true,
     autoHeight: true,
@@ -23,7 +23,7 @@ $(document).ready(function(){
     nav: true,
     responsive : {
       768: {
-        items: 1
+        items: 1,
       }
     }
   });
