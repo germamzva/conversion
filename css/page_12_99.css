@@ -1,0 +1,243 @@
+body.page_12_99{ background: #fff!important; }
+
+/* global  */
+
+.page_12_99 h2.head_border_bottom_yellow{ font-size: 3rem; position: relative; }
+.page_12_99 h2.head_border_bottom_yellow span{ font-size: 4.50rem; }
+.page_12_99 h2.head_border_bottom_yellow::after{
+    content: '';
+    width: 100px;
+    height: 8px;
+    background: #ff9000;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#page_12_99_text_content{
+    position: relative;
+}
+#page_12_99_text_content::after{ 
+    content: '';
+    width: 220px;
+    height: 5px;
+    background: #ff9000;
+    position: absolute;
+    top: 60px;
+    left: 14px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+/* edit */
+body.no-contract #mainContent_1 .box_offers .box_header_text h3{ _font-size: 1.80rem; }
+body.no-contract #mainContent_1 .box_offers .box_header_text h3 span{ _font-size: 2.40rem; _margin-top: .5rem; }
+
+/* fiber_advanced_mainBanner  */
+#page_12_99_banner{
+    position: relative;
+}
+#page_12_99_mainBanner{
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+#page_12_99_banner_shadow{
+    top: -7.6rem;
+    left: 133px;
+    z-index: -1;
+}
+
+#page_12_99_banner h1{ 
+    font-size: 3rem; 
+    color: #11304e; 
+    line-height: 1; 
+    position: relative;
+}
+#page_12_99_banner h1::before{ 
+    content: '';
+    position: absolute;
+    background: url(../images/icons/human.png) no-repeat;
+    width: 72px;
+    height: 154px;
+    top: -3rem;
+    left: 18rem;
+}
+#page_12_99_banner h1{  
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+#page_12_99_banner h1 span.banner_text_1{ 
+    font-size: 5.7rem;
+    font-weight: 400;
+    line-height: 56px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+}
+#page_12_99_banner h1 span.banner_text_2{
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+#page_12_99_banner h1 span i{ font-style: normal; }
+#page_12_99_banner p.price{ 
+    font-size: 4.80rem; 
+    color: #11304e;
+    position: relative;
+    line-height: 88px;
+}
+#page_12_99_banner p.price span{
+    font-size: 3rem;
+}
+#page_12_99_banner p.btn_submit_buy_now button{ 
+    font-size: 1.9rem; 
+    border-color: #ff9c00; 
+    color: #ff9c00; 
+    border-radius: 0px; 
+    border-width: 2px;
+    position: relative;
+    padding: 5px 23px;
+}
+
+#page_12_99_banner h1,
+#page_12_99_banner p{ padding-left: 6rem; }
+
+#page_12_99_banner::before{
+    position: absolute;
+    content: '';
+    background: url(../images/img-rocket-after.png) no-repeat;
+    width: 123px;
+    height: 268px;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+#page_12_99_banner p.btn_submit_buy_now button img{ }
+
+/* broadband_content_1 */
+#page_12_99_content{
+    padding-top: 7rem;
+    background: url(../images/broadband_bg_shape.png) no-repeat 114% -41%;
+}
+
+#page_12_99_content h2.header_text{
+    font-size: 3rem;
+    position: relative;
+}
+#page_12_99_content h2.header_text::after{
+    content: '';
+    width: 150px;
+    height: 8px;
+    background: #ff9000;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-radius: 0px 40px 40px 0px;
+}
+
+
+#contract_info p{
+    font-size: 1.80rem;
+    position: relative;
+}
+
+#contract_info p { 
+    color: #4d4d4d;
+}
+
+#page_12_99_content p a{ 
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+#page_12_99_content .list-group li:first-child{ border-top: 0; }
+#page_12_99_content .list-group li{
+    font-size: 1.70rem;
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e3e2;
+    background: none;
+    color: #11304e;
+}
+#page_12_99_content .list-group li::after{
+    content: '';
+    background: url(../images/icons/thin_arrow.png) no-repeat;
+    position: absolute;
+    width: 45px;
+    height: 36px;
+    right: 0;
+    top: 29px;
+}
+
+#page_12_99_content #shapes_bg{}
+#page_12_99_content #shapes_bg #triagle_1{ position: absolute; right: -24rem; top: 3.50rem; }
+#page_12_99_content #shapes_bg #triagle_2{ position: absolute; right: -32.5rem; top: 3.50rem;transform: rotate(85deg); }
+#page_12_99_content #shapes_bg #triagle_3{ position: absolute; right: -31rem; top: 12rem; transform: rotateZ(25deg); }
+
+@media (max-width: 1024px){
+    #page_12_99_content #left_img_content img{
+        width: 100%;
+    }
+    #paeg_12_99_text_content{
+        padding-top: 5rem;
+    }
+    #page_12_99_content{
+        background: url(../images/broadband_bg_shape.png) no-repeat 114% 2%;
+    }
+    #page_12_99_content .list-group li::after {
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px){
+    #page_12_99_banner h1{     
+        font-size: 2rem;
+        text-align: center!important;
+        padding-left: 0; 
+    }
+    #page_12_99_banner h1 span.banner_text_1{
+        _font-size: 3rem;
+    }
+    #page_12_99_banner p{
+        padding-left: 0;
+    }
+    #page_12_99_banner p.btn_submit_buy_now {
+        text-align: center!important;
+    }
+    #page_12_99_banner p.btn_submit_buy_now button{
+        padding: 6px 17px;
+        font-size: 1.40rem;
+    }
+    #page_12_99_banner h1 span.banner_text_2{
+        position: revert;
+    }
+    #page_12_99_banner h1::after{
+        top: -48px;
+        left: 201px;
+    }
+    #page_12_99_banner h1::before{
+        left: 17rem;
+    }
+    #page_12_99_content #shapes_bg #rocket_up{ right: -19rem; }
+    #page_12_99_content #shapes_bg #triagle_1{ right: -15rem;  }
+    #page_12_99_content #shapes_bg #triagle_2{ right: -21.5rem; }
+    #page_12_99_content #shapes_bg #triagle_3{  right: -20rem;  }
+    #page_12_99_content h2.header_text{ font-size: 2rem; }
+    #page_12_99_content .list-group li{
+        font-size: 1.3rem;
+        padding-right: 38px;
+    }
+    #page_12_99_banner::before{
+        left: 0;
+    }
+}

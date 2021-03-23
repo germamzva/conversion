@@ -1,0 +1,279 @@
+body.fibre-advanced{ background: #fff!important; }
+
+/* global  */
+
+.fibre-advanced h2.head_border_bottom_yellow{ font-size: 3rem; position: relative; }
+.fibre-advanced h2.head_border_bottom_yellow span{ font-size: 4.50rem; }
+.fibre-advanced h2.head_border_bottom_yellow::after{
+    content: '';
+    width: 100px;
+    height: 8px;
+    background: #ff9000;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    border-radius: 0px 0px 0px 0px;
+}
+
+body.broadband{ background: #fff!important; }
+
+/* fiber_advanced_mainBanner  */
+#fiber_advanced_mainBanner{
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+#fiber_advanced_banner_shadow{
+    top: -7.6rem;
+    left: 133px;
+    z-index: -1;
+}
+
+#fiber_advanced_banner h1{ 
+    font-size: 3rem; 
+    color: #11304e; 
+    line-height: 1; 
+    position: relative;
+}
+#fiber_advanced_banner h1::before{ 
+    content: '';
+    position: absolute;
+    background: url(../images/icons/human.png) no-repeat;
+    width: 72px;
+    height: 154px;
+    top: 74px;
+    left: 168px;
+}
+#fiber_advanced_banner h1::after{
+    content: '';
+    position: absolute;
+    background: url(../images/icons/rocket-orange.png) no-repeat;
+    width: 42px;
+    height: 42px;
+    right: -111px;
+    top: 94px;
+
+}
+#fiber_advanced_banner h1{  
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+#fiber_advanced_banner h1 span.banner_text_1{ 
+    font-size: 5.7rem;
+    font-weight: 400;
+    line-height: 56px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+}
+#fiber_advanced_banner h1 span.banner_text_2{
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+#fiber_advanced_banner h1 span i{ font-style: normal; }
+#fiber_advanced_banner p.price{ 
+    font-size: 4.80rem; 
+    color: #11304e;
+    position: relative;
+    line-height: 88px;
+}
+#fiber_advanced_banner p.price span{
+    font-size: 3rem;
+}
+#fiber_advanced_banner p.btn_submit_buy_now button{ 
+    font-size: 1.9rem; 
+    border-color: #ff9c00; 
+    color: #ff9c00; 
+    border-radius: 0px; 
+    border-width: 2px;
+    position: relative;
+    padding: 5px 23px;
+}
+
+#fiber_advanced_banner h1,
+#fiber_advanced_banner p{ padding-left: 76px; }
+
+#fiber_advanced_banner::before{
+    position: absolute;
+    content: '';
+    background: url(../images/img-rocket-after.png) no-repeat;
+    width: 123px;
+    height: 268px;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+#fiber__banner p.btn_submit_buy_now button span{}
+#fiber_advanced_banner p.btn_submit_buy_now button img{ }
+
+/* broadband_content_1 */
+#fibre-advanced_content{
+    padding-top: 7rem;
+    background: url(../images/broadband_bg_shape.png) no-repeat 114% 7%;
+}
+
+#fibre-advanced_content h2.header_text{
+    font-size: 3rem;
+    position: relative;
+}
+#fibre-advanced_content h2.header_text::after{
+    content: '';
+    width: 150px;
+    height: 8px;
+    background: #ff9000;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-radius: 0px 40px 40px 0px;
+}
+
+#fibre-advanced_content p{ 
+    color: #4d4d4d;
+}
+#fibre-advanced_content p a{ 
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+#circle_bg_pos{
+    z-index: -1;
+    left: -22rem;
+    top: 10rem;
+    width: 438px;
+    height: 438px;
+    background: #f9f7f6;
+    border-radius: 50%;
+}
+
+#fibre-advanced_content .list-group{}
+
+#fibre-advanced_content .list-group li:first-child{ border-top: 0; }
+#fibre-advanced_content .list-group li{
+    font-size: 1.70rem;
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e3e2;
+    background: none;
+}
+#fibre-advanced_content .list-group li::after{
+    content: '';
+    background: url(../images/icons/thin_arrow.png) no-repeat;
+    position: absolute;
+    width: 45px;
+    height: 36px;
+    right: 0;
+    top: 29px;
+}
+
+#fibre-advanced_content #shapes_bg{}
+#fibre-advanced_content #shapes_bg #rocket_up{ position: absolute; right: -29rem; }
+#fibre-advanced_content #shapes_bg #triagle_1{ position: absolute; right: -24rem; top: 3.50rem; }
+#fibre-advanced_content #shapes_bg #triagle_2{ position: absolute; right: -32.5rem; top: 3.50rem;transform: rotate(85deg); }
+#fibre-advanced_content #shapes_bg #triagle_3{ position: absolute; right: -31rem; top: 12rem; transform: rotateZ(25deg); }
+
+#thumb_up_icon{  
+    right: -2rem;
+    top: -7.4rem;
+    z-index: -1;
+}
+
+#advanced_content_4::after{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 150px;
+    background: #f9f7f6;
+    bottom: 7.3rem;
+    right: -75px;
+    z-index: -1;
+    border-radius: 150px 150px 0 0;
+    transform: rotate(-90deg);
+}
+
+#rocket_left_right_up #left_rocket{
+    left: 96px;
+    top: -40rem;
+
+}
+
+#rocket_left_right_up #right_rocket{
+    right: 50px;
+    top: -53rem;
+    z-index: -1;
+}
+
+@media (max-width: 1024px){
+    #fibre-advanced_content #shapes_bg #rocket_up{ right: -19rem; }
+    #fibre-advanced_content #shapes_bg #triagle_1{ right: -15rem;  }
+    #fibre-advanced_content #shapes_bg #triagle_2{ right: -22.5rem; }
+    #fibre-advanced_content #shapes_bg #triagle_3{  right: -20rem;  }
+    #fibre-advanced_content h2{ font-size: 2rem; }
+}
+
+@media (max-width: 768px){
+    #fibre-advanced_content_1{
+        padding-top: 0!important;
+    }
+    #fiber_advanced_banner h1{     
+        font-size: 2rem;
+        text-align: center!important;
+        padding-left: 0; 
+        padding-left: 0;
+    }
+    #fiber_advanced_banner h1 span.banner_text_1{
+        font-size: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #fiber_advanced_banner p{
+        padding-left: 0;
+    }
+    #fibre_advanced_banner p.btn_submit_buy_now {
+        text-align: center!important;
+    }
+    #fibre_advanced_banner p.btn_submit_buy_now button{
+        padding: 6px 17px;
+        font-size: 1.40rem;
+    }
+    #fibre_advanced_banner h1 span.banner_text_1{
+
+    }
+    #fiber_advanced_banner h1 span.banner_text_2{
+        position: revert;
+        font-size: 2rem;
+    }
+    #fiber_advanced_banner h1::after{
+        top: 94px;
+        left: 18rem;
+    }
+    #fiber_advanced_banner h1::before{
+        left: 16rem;
+        top: -43px; 
+    }
+    #fiber_advanced_banner_shadow img{
+        display: none!important;
+    }
+
+    #fibre-advanced_content .list-group li{
+        font-size: 1.3rem;
+        padding-right: 38px;
+    }
+
+    .fibre-advanced h2.head_border_bottom_yellow span{
+        font-size: 2.5rem;
+    }
+    #thumb_up_icon {
+        right: 0rem;
+        top: -4.4rem;
+        z-index: -1;
+    }
+    .fibre-advanced h2.head_border_bottom_yellow {
+        font-size: 2rem;
+    }
+}
