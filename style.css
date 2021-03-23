@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 body{
     font-size: 1.2rem;
@@ -10,20 +11,66 @@ body{
 }
 
 /*** Global css ***/
+
+/* headingd color blue */
+.h1_c,
+.h2_c,
+.h3_c,
+.h4_c,
+.h5_c,
+.h6_c{ color: #11304e; }
+
 a:focus{ outline: none; }
 
-.f-w1{ font-weight: 900; }
-.f-w2{ font-weight: 700; }
-.f-w3{ font-weight: 400; }
-.f-w4{ font-weight: 300; }
+/* font weights */
+.f-w1{ font-weight: 900!important; }
+.f-w2{ font-weight: 700!important; }
+.f-w3{ font-weight: 400!important; }
+.f-w4{ font-weight: 300!important; }
 
+/* z-index floating */
 .zindex1 { z-index: 1; }
 .zindex2 { z-index: 5; }
 .zindex3 { z-index: 10; }
 .zindex4 { z-index: 20; }
 .zindex5 { z-index: 50; }
 
+/* box shadow for object */
+.shadow_style{ box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important; }
+.text_shadow{ text-shadow: -1px 3px 10px #b3b3b3; }
+
+/* btn background or you can add here to call in global */
+
+.btn-bg-yellow{ background: #ff9000; }
+.btn-bg-blue{ background: #11304e; }
+.btn-bg-blue-border{ border-color: #11304e; border-width: 2px; background: #fff; }
 .bg-btn-bg{ background: #11304e;}
+
+/* site color */
+.text_yellow{ color: #ff9000; }
+.text_blue{ color: #11304e; }
+
+/* postions */
+.relative{ position: relative; }
+.absolute{ position: absolute; }
+
+/* font2 with font weight import and you can add new font here and name whatever you want for global class declaration */
+.font2_reg { font-family: 'Montserrat', sans-serif; font-weight: 400!important; }
+.font2_bold { font-family: 'Montserrat', sans-serif; font-weight: 600!important; }
+.font2_bold_2 { font-family: 'Montserrat', sans-serif; font-weight: 700!important; }
+.font2_bold_3 { font-family: 'Montserrat', sans-serif; font-weight: 800!important; }
+.font2_bold_4 { font-family: 'Montserrat', sans-serif; font-weight: 900!important; }
+
+/* font reset to the body font in an specific tags */
+.font_reset { font-family: 'Roboto', sans-serif!important; }
+
+/* letter spacing */
+
+.ls-1 { letter-spacing: -1px; }
+.ls-2 { letter-spacing: -2px; }
+.ls-3 { letter-spacing: -3px; }
+.ls-4 { letter-spacing: -4px; }
+.ls-5 { letter-spacing: -5px; }
 
 /*** mainHeader ***/
 #mainHeader{     
@@ -55,22 +102,53 @@ a:focus{ outline: none; }
     .mainHeader_nav_menu .navbar-brand img{  } 
     .mainHeader_nav_menu .collapse{ }
     .mainHeader_nav_menu .collapse ul{ }
-    .mainHeader_nav_menu .collapse ul li{ }
+    .mainHeader_nav_menu .collapse ul li{
+        position: relative;
+    }
     .mainHeader_nav_menu .collapse ul li a{ 
         font-size: .950rem; 
         color: #212529; 
-        position: relative;
         transition: all .5s ease-in-out;
     }
-    .mainHeader_nav_menu .collapse ul li a:hover::after,
-    .mainHeader_nav_menu .collapse ul li a.active::after{
+    .mainHeader_nav_menu .collapse ul>li:hover::after,
+    .mainHeader_nav_menu .collapse ul>li.active::after{
         content: '';
         background: #ff9c00;
         height: 4px;
         width: 30%;
-        bottom: -4px;
+        bottom: 0px;
         left: 8px;
         position: absolute;
+    }
+    .mainHeader_nav_menu .collapse ul>li>a::after{
+        content: '';
+        border: none;
+        margin-left: 0;
+    }
+    .mainHeader_nav_menu .collapse ul li ul.dropdown-menu{
+        
+    }
+    .mainHeader_nav_menu .collapse ul li ul.dropdown-menu li::after{
+        /* content: '';
+        height: 0;
+        background: none; */
+        width: 11%;
+        bottom: 0px;
+        left: 17px;
+    }
+    .mainHeader_nav_menu .collapse ul li.dropdown:hover ul.dropdown-menu{ 
+        display: block;
+    }
+    .mainHeader_nav_menu .collapse ul li ul.dropdown-menu{
+        box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%);
+        border-color: #e9e9f2;
+        background-color: #fff;
+        border-color: #fff;
+        transition: all .3s ease-in;
+    }
+    .mainHeader_nav_menu .collapse ul li ul.dropdown-menu li{}
+    .mainHeader_nav_menu .collapse ul li ul.dropdown-menu li a{
+        background: none;
     }
 
 #search_btn{}
@@ -90,7 +168,7 @@ a:focus{ outline: none; }
 /* searchBar */
 #searchBar{ 
     position: fixed;
-    z-index: 5;
+    z-index: 40;
     height: 100vh;
     background: #ffff;
     left: 0;
@@ -119,7 +197,7 @@ a:focus{ outline: none; }
 /* mobile_view_menu */
 #mobile_view_menu{
     position: fixed;
-    z-index: 5;
+    z-index: 40;
     height: 100vh;
     background: #11304e;
     left: 0;
@@ -130,16 +208,27 @@ a:focus{ outline: none; }
     text-align: center;
     overflow: auto;
 }
-#mobile_view_menu .list-group.list-group-horizontal{ margin-bottom: 4rem; }
+#mobile_view_menu::-webkit-scrollbar{
+
+}
+#mobile_view_menu .list-group.list-group-horizontal{ margin-bottom: 2rem; }
 #mobile_view_menu .list-group.list-group-horizontal li{ background: none; width: 38%; border: 0; }
 #mobile_view_menu .list-group.list-group-horizontal li img{ width: 44%; }
-#mobile_view_menu .navbar-nav{}
-#mobile_view_menu .navbar-nav li{}
+#mobile_view_menu .navbar-nav{
+    display: flex;
+    width: 100%;
+}
+#mobile_view_menu .navbar-nav li{
+    text-align: left;
+}
 #mobile_view_menu .navbar-nav li a{ font-size: 2rem; color: #fff; }
-#mobile_view_menu .list-group.list-group-horizontal-lg{ margin-top: 2rem; }
+#mobile_view_menu .list-group.list-group-horizontal-lg{ }
 #mobile_view_menu .list-group.list-group-horizontal-lg li{}
 #mobile_view_menu .list-group.list-group-horizontal-lg li a{ text-decoration: none; font-size: 1.30rem; font-weight: 500; }
 #mobile_view_menu .list-group.list-group-horizontal-lg img{ margin-right: 1rem; width: 9%; }
+#mobile_view_menu .navbar{
+    margin-top: -73px;
+}
 #mobile_view_menu #btn_close_icon{ 
     background: url(images/close-white.svg) no-repeat;
     width: 5rem;
@@ -148,6 +237,13 @@ a:focus{ outline: none; }
     height: 5rem;
     top: 0;
     right: 11px;
+}
+#mobile_view_menu .navbar-nav li a {
+    font-size: 1.50rem;
+}
+#mobile_view_menu .navbar-nav li ul{
+    background: transparent;
+    border: none;
 }
 
 /* mainBanner  */
@@ -189,11 +285,11 @@ a:focus{ outline: none; }
     background: url(images/icons/human.png) no-repeat;
     width: 72px;
     height: 154px;
-    top: -32px;
-    right: 214px;
+    top: -37px;
+    left: 226px;
 }
 #mainBanner h1 span{ 
-    font-size: 5.5rem; 
+    font-size: 4.76rem; 
     color: #ff9c00; 
 }
 #mainBanner h1 span i{ font-style: normal; }
@@ -211,8 +307,8 @@ a:focus{ outline: none; }
     background: url(images/icons/rocket-orange.png) no-repeat;
     width: 42px;
     height: 42px;
-    left: 49%;
-    top: 23px;
+    left: 47%;
+    top: 2px;
 }
 #mainBanner p.btn_submit_buy_now button{ 
     font-size: 1.9rem; 
@@ -221,7 +317,7 @@ a:focus{ outline: none; }
     border-radius: 0px; 
     border-width: 2px;
     position: relative;
-    padding: 8px 23px;
+    padding: 5px 23px;
 }
 #mainBanner .container{
     position: relative;
@@ -236,8 +332,12 @@ a:focus{ outline: none; }
     left: -12px;
 }
 #mainBanner p.btn_submit_buy_now button span{}
-#mainBanner p.btn_submit_buy_now button img{
-    
+#mainBanner p.btn_submit_buy_now button img{ }
+
+/* pages_content */
+#pages_content{
+    position: relative;
+    z-index: 1;
 }
 /* mainContent homepage */
 #mainContent{
@@ -254,20 +354,23 @@ a:focus{ outline: none; }
             font-weight: 400;
             font-size: 4.50rem;
             color: #11304e;
+            line-height: 1;
         }
         #mainContent_1 h1 span{
             font-weight: 900;
         }
         #mainContent_1 p.offers_top{
             position: relative;
-            font-size: 2rem;
+            font-size: 2.50rem;
             color: #ff9c00;
+            line-height: 1;
+            font-weight: 300;
         }
             #mainContent_1 p.offers_top span{ 
 
             }
             #mainContent_1 p.offers_top::after{ 
-                height: 3px;
+                height: 5px;
                 width: 8%;
                 background: #11304e;
                 top: 46px;
@@ -286,8 +389,8 @@ a:focus{ outline: none; }
             z-index: 1;
         }
         #mainContent_1 .box_offers .box_header_text h2{
-            font-size: 2.50rem;
-            font-weight: 700;
+            _font-size: 2.50rem;
+            _font-weight: 700;
             font-style: italic;
         }
         #mainContent_1 .box_offers .box_offers_icon{
@@ -296,15 +399,15 @@ a:focus{ outline: none; }
             margin-bottom: -47px;
         }
         #mainContent_1 .box_offers .box_header_text h3{
-            font-size: 2.50rem;
-            font-weight: 700;
+            _font-size: 2.50rem;
+            _font-weight: 700;
         }
         #mainContent_1 .box_offers .box_header_text h2 span{
             font-size: 1rem;
         }
         #mainContent_1 .box_offers .box_header_text h3 span{
-            font-size: 2rem;
-            font-weight: 500;
+            _font-size: 2rem;
+            _font-weight: 500;
         }
         #mainContent_1 .box_offers .box_offers_icon span{ 
             width: 130px;
@@ -318,7 +421,7 @@ a:focus{ outline: none; }
             background: linear-gradient(0deg, #113251, #055a95);
         }
         #mainContent_1 .box_offers .box_header_text.special h2{
-            font-size: 3rem;
+            font-size: 3.70rem;
         }
         #mainContent_1 .box_offers .box_offers_icon span img{}
         #mainContent_1 .arrow_click button{
@@ -348,7 +451,7 @@ a:focus{ outline: none; }
             padding: .6rem 4rem;
             font-size: 1.3rem;
             font-weight: 600;
-            background: linear-gradient( 0deg , #113251, #055a95);
+            background: linear-gradient( 0deg, #05355c, #0d4274);
             border-width: 0;
         }
         #mainContent_1 .box_offers .box_header_text.special ~ .card a{
@@ -573,13 +676,13 @@ a:focus{ outline: none; }
     #mainContent_7::after{
         content: '';
         background: url(images/img-faster-strong-wifi-after.png) no-repeat right 0;
-        width: 36%;
-        height: 990px;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 75px;
         right: 0px;
         z-index: -1;
-        background-size: cover;
+        background-size: contain;
     }
     #bg_image_yellow{
         position: relative;
@@ -657,9 +760,7 @@ a:focus{ outline: none; }
 
     #mainContent_8 #tab_block{}
         #mainContent_8 #tab_block .nav{}
-        #mainContent_8 #tab_block .nav .nav-item{
-            
-        }
+        #mainContent_8 #tab_block .nav .nav-item{}
         #mainContent_8 #tab_block .nav .nav-item .button{
             background: #e2e2e2;
             position: relative;
@@ -889,10 +990,10 @@ a:focus{ outline: none; }
             background: #f79612;
             width: .3rem;
             height: 4.40rem;
-            left: 72px;
+            left: 5px;
             border-radius: 30px;
         }
-        #mainContent_13 .card .card-body{}
+        #mainContent_13 .card .card-body{ position: relative; }
         #mainContent_13 .card .card-body h2{}
         #mainContent_13 .card .card-body p{ font-size: 1.50rem; }
         
@@ -955,7 +1056,7 @@ a:focus{ outline: none; }
 
 @media (max-width: 1024px){ 
     .mainHeader_contact_info p{ 
-        font-size: .8rem!important;
+        font-size: 1rem!important;
         text-align: center!important;
     }
     .mainHeader_nav_menu .navbar-brand{ margin-bottom: 0; width: 20%; display: flex; order: 1; }
@@ -968,6 +1069,14 @@ a:focus{ outline: none; }
     /* mainBanner */
     #mainBanner .container::before{ bottom: -65px; }
     #mainBanner h1{}
+
+    /* mainContent_1 */
+    #mainContent_1 .box_offers .box_header_text.special h2{
+        font-size: 1.70rem;
+    }
+    #mainContent_1 p.offers_top span {
+        font-size: 1.80rem;
+    }
 
     /* mainContent_2 */
     #mainContent_2 .box_steps{ clip-path: polygon(78% 0%, 0% 0, 18% 133%, 135% 401%); padding: 2rem; }
@@ -1042,7 +1151,7 @@ a:focus{ outline: none; }
     }
 
     /* mainContent_13 */
-    #mainContent_13 .card .card-body::before{ left: 61px; }
+    #mainContent_13 .card .card-body::before{ left: 0px; }
 }
 
 
@@ -1062,7 +1171,11 @@ a:focus{ outline: none; }
     /* #mainBanner */
     #mainBanner{ padding-top: 5rem!important; clip-path: polygon(51% 77%, 100% 68%, 100% 0, 0 0, 0 68%); }
     #mainBanner h1{ font-size: 2rem; text-align: center!important; }
-    #mainBanner h1::after{ top: -46px; right: 36px; }
+    #mainBanner h1::after{     
+        top: -42px;
+        right: auto;
+        left: 241px; 
+    }
     #mainBanner h1 span{ font-size: 3rem; }
     #mainBanner p.price{ font-size: 3rem; text-align: center!important; }
     #mainBanner p.price span{ font-size: 1.4rem; }
@@ -1180,12 +1293,12 @@ a:focus{ outline: none; }
     /* mainContent_13 */
     #mainContent_13 .card .card-body::before{ 
         top: 18px; 
-        left: 58px; 
+        left: 0; 
         height: 2.9rem;
     }
     #mainContent_13 #icon_supports img { width: 80%; }
     #mainContent_13 .card .card-body h2{ font-size: 1.2rem; }
-    #mainContent_13 .card .card-body p{ font-size: .9rem; }{
+    #mainContent_13 .card .card-body p{ font-size: .9rem; }
 
     /* #footerMain */
     #footerMain{ padding-top: 3rem!important; background-size: cover; }
