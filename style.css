@@ -138,17 +138,32 @@ a:focus{ outline: none; }
     }
     .mainHeader_nav_menu .collapse ul li.dropdown:hover ul.dropdown-menu{ 
         display: block;
+        animation: bye .5s;
     }
     .mainHeader_nav_menu .collapse ul li ul.dropdown-menu{
         box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%), 0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%);
         border-color: #e9e9f2;
         background-color: #fff;
         border-color: #fff;
-        transition: all .3s ease-in;
+        transition: all 3s ease-in-out;
     }
     .mainHeader_nav_menu .collapse ul li ul.dropdown-menu li{}
     .mainHeader_nav_menu .collapse ul li ul.dropdown-menu li a{
         background: none;
+    }
+
+    @keyframes bye {
+        0% {
+          transform: scale(0)
+        }
+
+        50%{
+            transform: scale(1.1)
+        }
+        
+        100% {
+          transform: scale(1)
+        }
     }
 
 #search_btn{}
