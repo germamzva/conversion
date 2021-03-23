@@ -23,8 +23,7 @@ $(document).ready(function(){
     nav: true,
     responsive : {
       768: {
-        items: 1,
-        nav: false,
+        items: 1
       }
     }
   });
